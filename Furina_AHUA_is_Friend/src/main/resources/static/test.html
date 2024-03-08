@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2; /* 设置背景颜色 */
+      font-family: Arial, sans-serif;
+      background-image: url('images/furina.jpg'); /* 设置背景图片 */
+      background-size: cover; /* 填充整个页面 */
+      background-repeat: no-repeat; /* 不重复显示 */
+    }
+
+    .navbar {
+      background-color: #ffffff; /* 设置导航栏背景颜色 */
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-toggle {
+      display: none; /* 隐藏导航栏的切换按钮 */
+    }
+
+    .nav-toggle-icon {
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .search-input {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      cursor: pointer;
+      background-color: #4285f4; /* 设置按钮的背景颜色 */
+      color: #ffffff; /* 设置按钮文字颜色 */
+      border: none;
+      border-radius: 0%; /* 设置按钮为圆形 */
+      font-size: 18px;
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+
+
+
+</head>
+<body>
+<div class="navbar">
+  <div>
+    <img src="menu-icon.png" alt="Menu" class="nav-toggle-icon" onclick="toggleNav()"> <!-- 导航栏切换按钮 -->
+    <span class="nav-toggle" id="navToggle">&#9776;</span> <!-- 导航栏切换按钮 -->
+  </div>
+  <div>
+    <!-- 导航栏中间的搜索栏 -->
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search...">
+    </div>
+  </div>
+  <div></div>
+</div>
+
+<div class="icon-row">
+  <!-- 图标行 -->
+  <button class="icon" onclick="navigateTo('hi.html')">Hi</button>
+  <button class="icon" onclick="navigateTo('hello.html')">Hello</button>
+  <button class="icon" onclick="navigateTo('fufu.html')">Fufu</button>
+  <button class="icon" onclick="navigateTo('ahua.html')">Ahua</button>
+  <button class="icon" onclick="navigateTo('luo.html')">Luo</button>
+  <button class="icon" onclick="navigateTo('bochii.html')">Bochii</button>
+</div>
+
+<script>
+  function toggleNav() {
+    var navToggle = document.getElementById('navToggle');
+    var navbar = document.querySelector('.navbar');
+
+    navbar.classList.toggle('show'); // 切换导航栏的显示状态
+  }
+
+  function navigateTo(page) {
+    window.location.href = page; // 跳转到指定页面
+  }
+</script>
+</body>
+</html>
